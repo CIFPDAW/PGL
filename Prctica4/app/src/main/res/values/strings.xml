@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Práctica4</string>
+    <string name="username">NOMBRE DE USUARIO</string>
+    <string name="password">CONTRASEÑA</string>
+    <string name="login">LOGIN</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="modify_password">MODIFICAR CONTRASEÑA</string>
+    <string name="delete_account">BORRAR CUENTA</string>
+    <string name="encrypt">ENCRIPTAR</string>
+    <string name="decrypt">DESENCRIPTAR</string>
+    <string name="back">VOLVER</string>
+    <string name="text_to_process">Texto a procesar</string>
+    <string name="method_caesar">Cifrado César</string>
+    <string name="method_reverse">Invertir Texto</string>
+    <string name="method_base64">Base64</string>
+    <string name="result">Resultado:</string>
+</resources>

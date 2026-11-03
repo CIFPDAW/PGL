@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Título principal -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Cuestionario de 10 Preguntas - Práctica 2"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- P1: RadioGroup -->
+        <TextView
+            android:id="@+id/tvPregunta1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="1. ¿Cuál es la capital de Francia?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitulo" />
+
+        <RadioGroup
+            android:id="@+id/rgPregunta1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta1">
+            <RadioButton android:id="@+id/rbP1Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Madrid" />
+            <RadioButton android:id="@+id/rbP1Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="París" />
+            <RadioButton android:id="@+id/rbP1Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Roma" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvFeedback1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgPregunta1" />
+
+        <!-- P2: Spinner -->
+        <TextView
+            android:id="@+id/tvPregunta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="2. ¿En qué año llegó el hombre a la Luna?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback1" />
+
+        <Spinner
+            android:id="@+id/spinnerPregunta2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta2" />
+
+        <TextView
+            android:id="@+id/tvFeedback2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPregunta2" />
+
+        <!-- P3: RadioGroup -->
+        <TextView
+            android:id="@+id/tvPregunta3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="3. ¿Cuál es el lenguaje principal para Android nativo?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback2" />
+
+        <RadioGroup
+            android:id="@+id/rgPregunta3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta3">
+            <RadioButton android:id="@+id/rbP3Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Python" />
+            <RadioButton android:id="@+id/rbP3Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kotlin" />
+            <RadioButton android:id="@+id/rbP3Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="JavaScript" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvFeedback3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgPregunta3" />
+
+        <!-- P4: CheckBox (Multivaluada) -->
+        <TextView
+            android:id="@+id/tvPregunta4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="4. ¿Qué lenguajes son orientados a objetos? (Selecciona todos)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback3" />
+
+        <CheckBox android:id="@+id/cbP4Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Java" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvPregunta4" />
+        <CheckBox android:id="@+id/cbP4Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Kotlin" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/cbP4Opc1" />
+        <CheckBox android:id="@+id/cbP4Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="HTML" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/cbP4Opc2" />
+
+        <TextView
+            android:id="@+id/tvFeedback4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbP4Opc3" />
+
+        <!-- P5: RadioGroup -->
+        <TextView
+            android:id="@+id/tvPregunta5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="5. ¿Qué componente muestra una lista desplegable que se cierra al seleccionar?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback4" />
+
+        <RadioGroup
+            android:id="@+id/rgPregunta5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta5">
+            <RadioButton android:id="@+id/rbP5Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ListView" />
+            <RadioButton android:id="@+id/rbP5Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spinner" />
+            <RadioButton android:id="@+id/rbP5Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RecyclerView" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvFeedback5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgPregunta5" />
+
+        <!-- P6: RadioGroup -->
+        <TextView
+            android:id="@+id/tvPregunta6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="6. ¿Qué layout permite posicionar elementos en relación con otros o bordes?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback5" />
+
+        <RadioGroup
+            android:id="@+id/rgPregunta6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta6">
+            <RadioButton android:id="@+id/rbP6Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LinearLayout" />
+            <RadioButton android:id="@+id/rbP6Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ConstraintLayout" />
+            <RadioButton android:id="@+id/rbP6Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TableLayout" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvFeedback6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgPregunta6" />
+
+        <!-- P7: Spinner -->
+        <TextView
+            android:id="@+id/tvPregunta7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="7. ¿Cuál es el sistema operativo móvil de Google?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback6" />
+
+        <Spinner
+            android:id="@+id/spinnerPregunta7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta7" />
+
+        <TextView
+            android:id="@+id/tvFeedback7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPregunta7" />
+
+        <!-- P8: RadioGroup -->
+        <TextView
+            android:id="@+id/tvPregunta8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="8. ¿Qué función se ejecuta al crear una Activity en Android?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback7" />
+
+        <RadioGroup
+            android:id="@+id/rgPregunta8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta8">
+            <RadioButton android:id="@+id/rbP8Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="onResume" />
+            <RadioButton android:id="@+id/rbP8Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="onCreate" />
+            <RadioButton android:id="@+id/rbP8Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="onStart" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvFeedback8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgPregunta8" />
+
+        <!-- P9: CheckBox (Multivaluada) -->
+        <TextView
+            android:id="@+id/tvPregunta9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="9. ¿Qué métodos de almacenamiento existen en Android? (Selecciona todos)"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback8" />
+
+        <CheckBox android:id="@+id/cbP9Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="SQLite" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/tvPregunta9" />
+        <CheckBox android:id="@+id/cbP9Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="SharedPreferences" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/cbP9Opc1" />
+        <CheckBox android:id="@+id/cbP9Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="Procesador de textos" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/cbP9Opc2" />
+
+        <TextView
+            android:id="@+id/tvFeedback9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbP9Opc3" />
+
+        <!-- P10: RadioGroup -->
+        <TextView
+            android:id="@+id/tvPregunta10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="10. ¿Qué extensión tienen los archivos de diseño visual en Android?"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback9" />
+
+        <RadioGroup
+            android:id="@+id/rgPregunta10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPregunta10">
+            <RadioButton android:id="@+id/rbP10Opc1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="java" />
+            <RadioButton android:id="@+id/rbP10Opc2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="kt" />
+            <RadioButton android:id="@+id/rbP10Opc3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xml" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvFeedback10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rgPregunta10" />
+
+        <!-- Botón Corregir -->
+        <Button
+            android:id="@+id/btnCorregir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="CORREGIR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFeedback10" />
+
+        <!-- TextView Resultado Final -->
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnCorregir" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
