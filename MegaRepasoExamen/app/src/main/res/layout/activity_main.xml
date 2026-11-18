@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 1. BD -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Alumno:"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Carlos" />
+
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar en Base de Datos" />
+
+        <!-- 2. CALCULADORA -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Horas de teoría y práctica (Cálculo):"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNum1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Horas de teoría (número)" />
+
+        <EditText
+            android:id="@+id/etNum2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="Horas de práctica (número)" />
+
+        <Button
+            android:id="@+id/btnSumar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calcular Horas Totales" />
+
+        <TextView
+            android:id="@+id/tvResultadoSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horas totales: 0"
+            android:textSize="16sp" />
+
+        <!-- 3. SPINNER -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Selecciona Curso:"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spCursos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 4. RADIOS -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Modalidad:"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rgModalidad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbPresencial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Presencial" />
+
+            <RadioButton
+                android:id="@+id/rbOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online" />
+        </RadioGroup>
+
+        <!-- 5. CHECKBOX -->
+        <CheckBox
+            android:id="@+id/cbBeca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solicita Beca" />
+
+        <!-- 6. ENVIAR -->
+        <Button
+            android:id="@+id/btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Enviar Inscripción" />
+
+        <TextView
+            android:id="@+id/tvResultadoInscripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resultado seleccionado: N/A" />
+
+    </LinearLayout>
+</ScrollView>
