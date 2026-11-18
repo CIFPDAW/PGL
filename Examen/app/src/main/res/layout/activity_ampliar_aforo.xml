@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ampliar aforo concierto"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Identificador:" />
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nuevo aforo total:" />
+
+    <EditText
+        android:id="@+id/etNuevoAforo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnAmpliar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Ampliar aforo" />
+
+    <TextView
+        android:id="@+id/lblMensaje2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Mensaje de resultado" />
+
+</LinearLayout>
